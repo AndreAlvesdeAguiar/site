@@ -16,7 +16,22 @@ body {
 }
 
 
+/* dark-mode.css */
 
+body {
+  background-color: #222; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+.navbar {
+  background-color: #333; /* Dark navbar background color */
+}
+
+.nav-title {
+  color: #fff; /* Light navbar text color */
+}
+
+/* Add more styles for other elements as needed */
 
 /* Main Page Layout */
 
