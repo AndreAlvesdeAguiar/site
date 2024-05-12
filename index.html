@@ -47,32 +47,31 @@
 	</head>
 
 	<body>
-
-		
-    <h3 id="DarkModetext">Dark Mode is OFF</h3>
-    <button onclick="darkMode()">Darkmode</button>
-    <button onclick="lightMode()">LightMode</button>
-    <script>
-        function darkMode() {
-            let element = document.body;
-            let content = document.getElementById("DarkModetext");
-            element.className = "dark-mode";
-            content.innerText = "Dark Mode is ON";
-        }
-        function lightMode() {
-            let element = document.body;
-            let content = document.getElementById("DarkModetext");
-            element.className = "light-mode";
-            content.innerText = "Dark Mode is OFF";
-        }
-    </script>
-
 		
     <!-- NAVBAR -->
     <div class="navbar">
       <a class="nav-title-link" href="./index.html">
         <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
         <span class="nav-title">Portfolio</span>
+	      
+	<h1 id="DarkModetext">Dark Mode is OFF</h3>
+	    <button onclick="darkMode()">Darkmode</button>
+	    <button onclick="lightMode()">LightMode</button>
+	    <script>
+		function darkMode() {
+		    let element = document.body;
+		    let content = document.getElementById("DarkModetext");
+		    element.className = "dark-mode";
+		    content.innerText = "Dark Mode is ON";
+		}
+		function lightMode() {
+		    let element = document.body;
+		    let content = document.getElementById("DarkModetext");
+		    element.className = "light-mode";
+		    content.innerText = "Dark Mode is OFF";
+		}
+	    </script>
+
          <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
         <a class="button" href="mailto:whitevans.eth@gmail.com">
           <span class="button-text">Contact Me</span>
