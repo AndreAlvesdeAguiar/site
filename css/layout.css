@@ -2,6 +2,59 @@
   box-sizing: border-box;
 }
 
+
+
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 10px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Update text color to white when dark mode is active */
+.dark-mode body {
+  color: white;
+}
+
+/* Adjust navbar elements for dark mode */
+.navbar {
+  background-color: white; /* Light navbar background color */
+  color: black; /* Dark text color */
+}
+
+.navbar .nav-title {
+  color: black; /* Dark text color */
+}
+
+.navbar .button {
+  background-color: black; /* Dark button background color */
+  color: white; /* Light button text color */
+}
+.button{
+  background-color: white; /* Dark button background color */
+  color: black; /* Light button text color */
+}
+.footer-icon{
+  background-color: white; /* Dark button background color */
+  color: black; /* Light button text color */
+}
+
+
+
+
 html {
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -9,12 +62,59 @@ html {
   -ms-text-size-adjust: none;
 }
 
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
 
 /* Main Page Layout */
 
