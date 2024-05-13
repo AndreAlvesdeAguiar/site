@@ -18,73 +18,34 @@
 	</head>
 
 	<body>
-<style>
-    body {
-        padding: 25px;
-        background-color: white;
-        color: black;
-        font-size: 10px;
-    }
-
-    .dark-mode {
-        background-color: black;
-        color: white;
-    }
-
-    .light-mode {
-        background-color: white;
-        color: black;
-    }
-
-    /* Update text color to white when dark mode is active */
-    .dark-mode body {
-        color: white;
-    }
-
-    /* Adjust navbar elements for dark mode */
-    .navbar {
-        background-color: white; /* Light navbar background color */
-        color: black; /* Dark text color */
-    }
-
-    .navbar .nav-title {
-        color: black; /* Dark text color */
-    }
-
-    .navbar .button {
-        background-color: black; /* Dark button background color */
-        color: white; /* Light button text color */
-    }
-    .button{
-        background-color: white; /* Dark button background color */
-        color: black; /* Light button text color */
-    }
-    .footer-icon{
-        background-color: white; /* Dark button background color */
-        color: black; /* Light button text color */
-    }
-	
-</style>
+    
     <!-- NAVBAR -->
     <div class="navbar">
-	    <h3 id="DarkModetext">Dark Mode is OFF</h3>
-	    <button onclick="darkMode()">Darkmode</button>
-	    <button onclick="lightMode()">LightMode</button>
-	    <script>
-		function darkMode() {
-		    let element = document.body;
-		    let content = document.getElementById("DarkModetext");
-		    element.className = "dark-mode";
-		    content.innerText = "Dark Mode is ON";
-		}
-		function lightMode() {
-		    let element = document.body;
-		    let content = document.getElementById("DarkModetext");
-		    element.className = "light-mode";
-		    content.innerText = "Dark Mode is OFF";
-		}
-	    </script>
-	    
+  
+      <label class="switch">
+          <!-- Input checkbox que representa o estado do modo escuro/claro -->
+          <input type="checkbox" onclick="toggleDarkMode()" id="darkModeToggle">
+          <!-- Elemento visual do switch -->
+          <span class="slider"></span>
+      </label>
+  
+      <script>
+          // Função para alternar entre os modos escuro e claro
+          function toggleDarkMode() {
+              let element = document.body;
+              let content = document.getElementById("DarkModetext");
+              let darkModeToggle = document.getElementById("darkModeToggle");
+              // Verifica se o switch está marcado (modo escuro ativado)
+              if (darkModeToggle.checked) {
+                  element.className = "dark-mode";
+                  content.innerText = "Dark Mode is ON";
+              } else {
+                  // Se não estiver marcado, ativa o modo claro
+                  element.className = "light-mode";
+                  content.innerText = "Dark Mode is OFF";
+              }
+          }
+      </script>
       <a class="nav-title-link" href="./index.html">
         <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
         <span class="nav-title">Portfolio</span>
